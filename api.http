@@ -2,7 +2,21 @@ POST http://localhost:3333/events
 Content-Type:  application/json
 
 {
-  "title": "Fullstack Weekend",
-  "details": "evento para programadores de todos os niveis",
-  "maximunAttendees":100
+  "title": "New Event 2",
+  "details": null,
+  "maximunAttendees": 1
 }
+
+### 
+
+POST http://localhost:3333/events/42985720-7279-47d3-b9ff-c066e22ccd12/attendees
+Content-Type:  application/json
+
+{
+  "name": "Yitzhak Rodriguez",
+  "email": "yitzhakrodriguez.0901@gmail.com"
+}
+
+###
+
+GET http://localhost:3333/events/42985720-7279-47d3-b9ff-c066e22ccd12
