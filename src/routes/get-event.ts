@@ -14,6 +14,18 @@ export const getEvent = async (app: FastifyInstance) => {
     const { eventId } = request.params
 
     const event = await prisma.event.findUnique({
+      select: {
+        id: true,
+        title: true,
+        slug: true,
+        details: true,
+        maximunAttendees: true,
+        _count: {
+          select: {
+            attendees: true
+          }
+        }
+      },
       where: {
         id: eventId
       }
@@ -23,6 +35,15 @@ export const getEvent = async (app: FastifyInstance) => {
       throw new Error('Event not found')
     }
 
-    return reply.send({ event })
+    return reply.send({
+      event: {
+        id: event.id,
+        title: event.title,
+        slug: event.slug,
+        details: event.details,
+        maximunAttendees: event.maximunAttendees,
+        attendeesAmount: event._count.attendees
+      }
+    })
   })
 }

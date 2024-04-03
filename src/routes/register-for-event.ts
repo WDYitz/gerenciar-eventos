@@ -33,7 +33,7 @@ export const registerForEvent = async (app: FastifyInstance) => {
     })
 
     if (attendeeFromEmail !== null) {
-      throw new Error('this e-mail is already resgistered for this event')
+      throw new Error('this e-mail is already registered for this event')
     }
 
     const [event, amountfOfAttendeesForEvent] = await Promise.all([

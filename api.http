@@ -2,14 +2,14 @@ POST http://localhost:3333/events
 Content-Type:  application/json
 
 {
-  "title": "New Event 2",
-  "details": null,
-  "maximunAttendees": 1
+  "title": "Fullstack Event 2.0",
+  "details": "Evento para programadores de todos os niveis",
+  "maximunAttendees": 100
 }
 
 ### 
 
-POST http://localhost:3333/events/42985720-7279-47d3-b9ff-c066e22ccd12/attendees
+POST http://localhost:3333/events/3a627cb6-29a6-4d42-9e5d-7aba4258946f/attendees
 Content-Type:  application/json
 
 {
@@ -19,4 +19,4 @@ Content-Type:  application/json
 
 ###
 
-GET http://localhost:3333/events/42985720-7279-47d3-b9ff-c066e22ccd12
+GET http://localhost:3333/events/3a627cb6-29a6-4d42-9e5d-7aba4258946f
