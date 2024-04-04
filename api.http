@@ -2,14 +2,14 @@ POST http://localhost:3333/events
 Content-Type:  application/json
 
 {
-  "title": "Fullstack Event 2.0",
-  "details": "Evento para programadores de todos os niveis",
+  "title": 123,
+  "details": "Evento 3.0",
   "maximunAttendees": 100
 }
 
 ### 
 
-POST http://localhost:3333/events/3a627cb6-29a6-4d42-9e5d-7aba4258946f/attendees
+POST http://localhost:3333/events/7b56821d-df05-495e-ad2d-292a699a2c16/attendees
 Content-Type:  application/json
 
 {
@@ -19,4 +19,14 @@ Content-Type:  application/json
 
 ###
 
-GET http://localhost:3333/events/3a627cb6-29a6-4d42-9e5d-7aba4258946f
+GET http://localhost:3333/events/7b56821d-df05-495e-ad2d-292a699a2c16
+
+###
+
+GET http://localhost:3333/attendees/6/badge
+
+### 
+GET http://localhost:3333/attendees/6/check-in
+
+###
+GET http://localhost:3333/events/7b56821d-df05-495e-ad2d-292a699a2c16/attendees?query=Yitzhak
