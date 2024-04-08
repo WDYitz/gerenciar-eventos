@@ -2,31 +2,33 @@ POST http://localhost:3333/events
 Content-Type:  application/json
 
 {
-  "title": 123,
-  "details": "Evento 3.0",
-  "maximunAttendees": 100
+  "title": 'nome do evento',
+  "details": 'detalhe do evento',
+  "maximunAttendees": capacidade maxima do evento
 }
 
 ### 
 
-POST http://localhost:3333/events/7b56821d-df05-495e-ad2d-292a699a2c16/attendees
+POST http://localhost:3333/events/id-do-evento/attendees
 Content-Type:  application/json
 
 {
-  "name": "Yitzhak Rodriguez",
-  "email": "yitzhakrodriguez.0901@gmail.com"
+  "name": "nome a ser cadastrado no evento",
+  "email": "email a ser cadastrado no evento"
 }
 
 ###
 
-GET http://localhost:3333/events/7b56821d-df05-495e-ad2d-292a699a2c16
+GET http://localhost:3333/events/id-do-evento
 
 ###
 
-GET http://localhost:3333/attendees/6/badge
+GET http://localhost:3333/attendees/id-do-attendee/badge
 
 ### 
-GET http://localhost:3333/attendees/6/check-in
+
+GET http://localhost:3333/attendees/id-do-attendee/check-in
 
 ###
-GET http://localhost:3333/events/7b56821d-df05-495e-ad2d-292a699a2c16/attendees?query=Yitzhak
+
+GET http://localhost:3333/events/id-do-evento/attendees?query=nome-cadastrado-no-evento
