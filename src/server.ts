@@ -24,8 +24,8 @@ app.register(fastifySwagger, {
     consumes: ['application/json'],
     produces: ['application/json'],
     info: {
-      title: 'pass.in',
-      description: 'Especificações da API para o back-end da aplicação pass.in',
+      title: 'Gerenciardor de eventos',
+      description: 'Especificações da API para o back-end da aplicação de gereciamento de eventos',
       version: '1.0.0'
     },
   },
