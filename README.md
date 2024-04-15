@@ -33,4 +33,4 @@ npm install
 
 ## Documentação se encontra na rota - `http://localhost:3333/docs`
 
-⌨️ [Yitzhak Rodriguez](https://gist.github.com/WDYitz) 😊
+⌨️ [Yitzhak Rodriguez](https://gist.github.com/WDYitz) 🔥
